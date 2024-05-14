@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+main{
+    background-image: url(/Images/regback.png);
+    height: 784px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark-overlay {
+    position: absolute;
+    top: 97px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    height: 784px;
+}
+
+.login-form-container {
+    position: relative;
+    width: 665px; 
+    height: 448px; 
+    background-color: rgba(32, 32, 32, 0.5); 
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.login-form h2 {
+    margin-top: 0;
+    color: #E78E0A;
+    text-align: center;
+    font-size:30px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container {
+    background-color: transparent; 
+   
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+    background-color: transparent; 
+    border: none; 
+    border-bottom: 2px solid white; 
+    color: white; 
+    width: 100%; 
+    padding: 10px 0; 
+    margin: 10px 0; 
+    font-size: 16px; 
+    outline: none; 
+}
+
+.input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+.input-container input:focus {
+    border-bottom-color: #FFA500; 
+}
+.forgot-password {
+    color: white !important;
+    font-size: 13px;
+    margin-right:285px;
+    margin-bottom: 10px;
+    margin-top:10px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    background-color: #FF7E07;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+.login-button:hover {
+    background-color: #e56a06; 
+}
+
+.login-form .social-login {
+    margin: 5px;
+    padding: 5px 10px;
+    width: 100px;
+}
+
+.login-form .social-login.vk {
+    background-color: #0077FF; 
+    color:white;
+    width: 139px;
+    height: 34px;
+}
+
+.login-form .social-login.google {
+    background-color: white; 
+    color:#858383;
+    width: 139px;
+    height: 34px;
+}
+
+.login-form a {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.login-form p {
+    color: #AFAFAF;
+    text-align: center;
+    font-size: 15px;
+}
+.social{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
