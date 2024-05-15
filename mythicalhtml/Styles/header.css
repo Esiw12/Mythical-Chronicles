@@ -13,7 +13,6 @@ nav ul {
     display: flex;
     align-items: center;
 }
-
 .gradient-text {
     background: linear-gradient(to right, #F76B1C, #FFD500);
     -webkit-background-clip: text;

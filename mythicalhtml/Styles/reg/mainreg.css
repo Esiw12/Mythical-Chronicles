@@ -25,7 +25,7 @@ main{
     height: 784px;
 }
 /*форма регистрации*/
-.login-form-container {
+.reg-form-container {
     position: relative;
     width: 665px; 
     height: 548px; 
@@ -40,14 +40,14 @@ main{
     z-index: 999;
 }
 /*название блока*/
-.login-form h2 {
+.reg-form h2 {
     margin-top: 0;
     color: #E78E0A;
     text-align: center;
     font-size:30px;
 }
 /*вид формы*/
-.login-form form {
+.reg-form form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +96,7 @@ main{
     text-decoration: underline;
 }
 
-.login-button {
+.reg-button {
     background-color: #FF7E07;
     color: black;
     border: none;
@@ -106,36 +106,36 @@ main{
     box-shadow: 0 2px 4px rgba(0,0,0,0.5); 
 }
 
-.login-button:hover {
+.reg-button:hover {
     background-color: #e56a06; 
 }
 
-.login-form .social-login {
+.reg-form .reg-login {
     margin: 5px;
     padding: 5px 10px;
     width: 100px;
 }
 
-.login-form .social-login.vk {
+.reg-form .social-reg.vk {
     background-color: #0077FF; 
     color:white;
     width: 139px;
     height: 34px;
 }
 
-.login-form .social-login.google {
+.reg-form .social-reg.google {
     background-color: white; 
     color:#858383;
     width: 139px;
     height: 34px;
 }
 
-.login-form a {
+.reg-form a {
     color: #FFA500;
     text-decoration: none;
 }
 
-.login-form p {
+.reg-form p {
     color: #AFAFAF;
     text-align: center;
     font-size: 15px;
