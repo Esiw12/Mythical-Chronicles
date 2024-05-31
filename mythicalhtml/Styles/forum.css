@@ -1,0 +1,122 @@
+body {
+    background-color: #181818;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+    max-width: calc(100% - 70px); /* Обеспечивает отступы по 35px с каждой стороны */
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.search__bar {
+    display: flex;
+    background-color: #414141;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.search__bar .title {
+    font-size: 24px;
+    margin-left:30px;
+    font-weight: bold;
+}
+.search__bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    background-color: #1D1D1D;
+    margin-right:30px;
+    font-size:20px;
+    color:#646464;
+    width: 300px;
+    height: 30px;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* This ensures both columns are the same height */
+}
+.content, .sidebar {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+}
+.content {
+    flex: 2;
+    margin-right: 20px;
+}
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.forum_header {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.forum-post {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    padding: 20px;
+    display:flex;
+    margin-bottom: 20px;
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.post-avatar {
+    background-color: #444;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+.post-info {
+    display: flex;
+    flex-direction: column;
+}
+.post-author {
+    font-weight: bold;
+}
+.post-role {
+    color: #ffa500;
+}
+.post-timestamp, .post-likes {
+    color: #777;
+}
+.post-content {
+    margin-top: 10px;
+}
+.sidebar-section {
+    margin-bottom: 20px;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+}
+.sidebar-section h3 {
+    margin-top: 0;
+}
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.user-avatar {
+    background-color: #444;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.query {
+    margin-bottom: 5px;
+}

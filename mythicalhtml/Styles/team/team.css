@@ -6,7 +6,7 @@ body, html {
     overflow-x: hidden;
 }
 main{
-    background-image: url(/Images/regback.png);
+    background-color: #181818;
     height: 884px;
     background-size: cover;
     background-position: center;
@@ -15,6 +15,7 @@ main{
     align-items: center;
     justify-content: center;
 }
+
 h1{
     color:white;
     text-align: center;
@@ -31,42 +32,57 @@ h1{
     z-index: 1;
     height: 884px;
 }
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    z-index: 2;
-    justify-content: space-between;
+.team {
+    margin-top:0;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
 }
-.otherimages{
-    display:flex;
-    flex-direction: row;
+
+.team .member {
+    display: inline-block;
+    margin: 20px;
 }
-.firstimage {
-    background: rgba(32, 32, 32, 0.5);
-    width: 319px;
-    margin-top:5px;
-    height: 461px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.firstimage img{
+
+.team .member img {
     width: 292px;
     height: 393px;
-   
+    object-fit: cover;
 }
-.photoblock{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+
+.team .member p {
+    margin: 10px 0 0;
+    font-size:28px;
 }
-.photoblock p{
-    margin-top:-40px;
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    border-radius: 50%;
+    filter: blur(13.1px);
+    animation: rise 10s infinite;
 }
-.otherimages img{
-   
-    margin-bottom: 0;
-    margin-left: 10px; 
+
+.bubble.yellow {
+    background-color: rgba(234, 175, 111, 0.5);
+}
+
+.bubble.orange {
+    background-color: rgba(255, 137, 7, 0.5);
+}
+
+.bubble.lightyellow {
+    background-color: rgba(255, 230, 7, 0.5);
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px) scale(2);
+        opacity: 0;
+    }
 }

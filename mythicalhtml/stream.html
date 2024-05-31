@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2a2a;
+            padding: 10px;
+        }
+        .clock {
+            font-size: 24px;
+        }
+        .subscription-button {
+            background-color: grey;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .main-content {
+            display: flex;
+            width: 100%;
+        }
+        .left-panel {
+            flex: 1;
+        }
+        .right-panel {
+            width: 300px;
+            margin-left: 20px;
+        }
+        .live-stream {
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+        .streams {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .stream {
+            margin: 10px;
+        }
+        .stream img {
+            width: 200px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .category {
+            margin: 10px;
+        }
+        .category img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .subscriptions {
+            display: none;
+            flex-direction: column;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #333;
+            padding: 20px;
+        }
+        .subscriptions.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="clock" id="clock">13:46:30</div>
+    <button class="subscription-button" id="subscriptionButton">My Subscriptions</button>
+</header>
+
+<main class="main-container">
+    <div class="main-content">
+        <div class="left-panel">
+            <div class="live-stream">
+                <img src="/Images/stream.svg" alt="Live Stream" style="width: 100%;">
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="subscriptions" id="subscriptions">
+                <div>Kuplinov Play</div>
+                <div>FalFox</div>
+                <div>EvilArthas</div>
+                <div>SKYHWYALKER</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="streams">
+        <div class="stream"><img src="path_to_stream1.jpg" alt="Stream 1"></div>
+        <div class="stream"><img src="path_to_stream2.jpg" alt="Stream 2"></div>
+        <div class="stream"><img src="path_to_stream3.jpg" alt="Stream 3"></div>
+        <div class="stream"><img src="path_to_stream4.jpg" alt="Stream 4"></div>
+    </div>
+
+    <div class="categories">
+        <div class="category"><img src="path_to_category1.jpg" alt="Category 1"></div>
+        <div class="category"><img src="path_to_category2.jpg" alt="Category 2"></div>
+        <div class="category"><img src="path_to_category3.jpg" alt="Category 3"></div>
+        <div class="category"><img src="path_to_category4.jpg" alt="Category 4"></div>
+        <div class="category"><img src="path_to_category5.jpg" alt="Category 5"></div>
+        <div class="category"><img src="path_to_category6.jpg" alt="Category 6"></div>
+        <div class="category"><img src="path_to_category7.jpg" alt="Category 7"></div>
+        <div class="category"><img src="path_to_category8.jpg" alt="Category 8"></div>
+    </div>
+</main>
+
+<script>
+    document.getElementById('subscriptionButton').addEventListener('click', function() {
+        document.getElementById('subscriptions').classList.toggle('active');
+    });
+
+    function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').innerText = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
