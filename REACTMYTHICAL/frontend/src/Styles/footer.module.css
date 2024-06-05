@@ -1,0 +1,102 @@
+footer{
+    background-color: #0D0D0D;
+    height: 322px;
+    }
+    .footer__content{
+        display:flex;
+        flex-direction: row;
+    }
+    p{
+        margin-bottom: 0;
+        text-align: center;
+        color:white;
+        font-weight: bold;
+        font-size:21px;
+    }
+    .footer__logo{
+        margin-top:50px;
+        margin-left:50px;
+    }
+    .footerinfo{
+        display:flex;
+        flex-direction: column;
+        width: 1149px;
+        height: 250px;
+        margin-left:100px;
+    }
+    .footer_line {
+        position: relative;
+        width: 100%; 
+        margin: 10px 0;
+    }
+    
+    .footer_line::after {
+        content: ""; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 3px;
+        background-color: #505050; 
+        display: block;
+    }
+    
+    
+    .footercontainersocial {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .social__networks{
+        margin-left:50px;
+    }
+    .social__networks p {
+        margin: 0 20px 0 0;
+        font-weight: bold;
+        color:#905207;
+        font-size: 24px;
+    }
+    
+    .social_icons {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .site__links{
+        font-size:25px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+    }
+    .site__links a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .footer__company p {
+        font-size: 20px;
+        color: #7A7A7A; 
+    }
+    
+    .footer__company p:last-child {
+        margin-top: 5px;
+    }
+    .footer_social_block h2{
+        color:#ACACAC !important;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    /*выравнивание*/
+    .footer_social_block{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color:#ACACAC;
+        text-align: center;
+        margin: 0 10px;
+        
+    }

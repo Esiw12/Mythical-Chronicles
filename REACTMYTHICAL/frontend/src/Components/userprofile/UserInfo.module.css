@@ -1,0 +1,108 @@
+
+.profileContainer {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #202020;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-image: url('../../Images/userback.svg'); 
+  background-position: center;
+}
+.lastActivity {
+  background-color: rgb(68,67,67,0.23);
+  height: 250px;
+  width: 450px;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.profilePicture {
+  position: relative;
+  text-align: center;
+}
+
+.profilePicture img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.fileInput {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.userDetails {
+  width: 100%;
+}
+
+.editButton, .saveButton {
+  background-color: #ffcc00;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.editFields input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #303030;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.Favor{
+  font-size:44px;
+}
+.userInfo p {
+  margin: 5px 0;
+}
+
+.centerSection {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.lastActivity {
+  text-align: center;
+}
+
+.favoriteGames {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.game {
+  margin: 10px;
+}
+
+.game img {
+  width: 180px;
+  height: 250px;
+  border-radius: 5px;
+}

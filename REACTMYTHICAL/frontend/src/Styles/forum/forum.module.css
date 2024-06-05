@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;700&display=swap');
+body { 
+    background-color: #2E2E2E;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.forum_main {
+   
+    margin: 20px auto;
+    height: 984px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 140px); /* Высота окна минус высота хедера и футера */
+    box-sizing: border-box; /* Учитывать отступы и padding */
+}
+
+.search__bar {
+    display: flex;
+    background-color: #414141;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: calc(100% - 40px); /* Изменение ширины панели поиска */
+    padding: 0 20px; /* Отступы внутри панели поиска */
+}
+
+.search__bar .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search__bar input[type="text"] {
+    padding: 3px;
+    border: none;
+    background-color: #1D1D1D;
+    font-size: 20px;
+    color: #646464;
+    width: 300px;
+    height: 30px;
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1; /* Растягивать на всю оставшуюся высоту */
+}
+
+.content {
+    background-color: #323232;
+    padding: 20px;
+    flex: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавление тени */
+    margin-right: 20px;
+}
+
+.sidebar {
+    background-color: #323232;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавление тени */
+    display: flex;
+    flex-direction: column;
+    height: 836px;
+}
+
+.forum_header {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Белый цвет для заголовка */
+}
+
+.forum_post {
+    background-color: #1E1E1E; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавление тени */
+    display: flex;
+    margin-bottom: 20px;
+    width: 96%; 
+}
+
+.post_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.post_avatar {
+  
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post_avatar img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post_info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.post_author {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffa500;
+    font-size:16px;
+}
+
+.post_role {
+    font-size: 0.9em;
+    color: #FFFFFF; 
+    font-size:16px;
+}
+
+.post_timestamp, .post_likes {
+    font-size: 0.8em;
+    color: #FFFFFF;
+    font-size:16px;
+}
+
+.post_timestamp {
+    color: #777;
+}
+
+.line_block {
+    border: 0;
+    height: 170px;
+    width: 3px;
+    position: relative;
+    right:1%;
+    background: #444;
+    margin: 10px 0;
+   
+}
+.post_content {
+    margin-top: 10px;
+    text-align: left;
+    flex: 2; /* Добавление flex для равномерного распределения пространства */
+}
+
+.post_content h3 {
+    margin-top: 0;
+    color: #9D5622;
+    font-size: 1.4em;
+}
+.sidebar_section {
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавление тени */
+}
+
+.sidebar_section h3 {
+    margin-top: 0;
+    color: #FF8B02; 
+    font-size:34px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user_avatar_fair, .user_avatar_god, .user_avatar_kup {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+.user_avatar_fair {
+    background-image: url('../../Images/fairfox.svg');
+}
+
+.user_avatar_god {
+    background-image: url('../../Images/nikitagod.svg');
+}
+
+.user_avatar_kup {
+    background-image: url('../../Images/kuplinov.svg');
+}
+
+.query {
+    margin-bottom: 5px;
+    color: #ffffff; 
+    font-family: 'Be Vietnam', sans-serif; /* Шрифт Be Vietnam */
+    font-size: 1.3em; /* Увеличенный размер шрифта */
+    line-height: 1.5em; /* Высота строки для удобства чтения */
+}

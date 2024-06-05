@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+h1{
+    color:white;
+    text-align: center;
+    font-size: 48px;
+}
+.note {
+    color: gray; 
+}
+
+main{
+    display:flex;
+    background-color: #181818;
+    flex-direction: column;
+    height: 758px;
+}
+.contactcontainer{
+    display:flex;
+    margin-left:200px;
+}
+.contactinfo {
+    background-color: rgb(15,15,15,0.5); 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    width: 614px; 
+    height: 493;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box; 
+}
+
+.contactinfo h2 {
+    color:#9D6836;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 10px; 
+}
+
+.contactinfo p {
+    text-align: left;
+    color:white;
+    margin-top: 0;
+    margin-bottom: 10px; /* Отступы для параграфов */
+}

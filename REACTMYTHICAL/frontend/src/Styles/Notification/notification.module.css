@@ -1,0 +1,24 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0E0E0E;
+    color: #836d0c;
+    padding: 20px;
+    border: 1px solid #b36f0b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    color: #FFE15A;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  

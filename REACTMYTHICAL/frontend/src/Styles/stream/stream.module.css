@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+.stream_main {
+    padding: 0px;
+    height: 1500px;
+}
+
+.live_stream {
+    background: url("../../Images/stream/background_stream.svg");
+    height: 818px;
+    width: 1900px;
+}
+
+.live_stream .banner {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.clock {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.clock .date {
+    font-size: 24px;
+}
+
+#time {
+    font-size: 32px;
+}
+
+.subscriptions {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 818px; /* Высота панели соответствует высоте картинки */
+    background: rgb(0,0,0);
+    background: linear-gradient(349deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%);
+    transition: right 0.3s;
+    padding: 20px;
+    margin-top: 97px;
+}
+
+.subscriptions h3 {
+    margin-top: 0;
+}
+
+.subscriptions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscriptions ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.subscriptions ul li img {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.open_btn, .close_btn {
+    background-color: #ffb700;
+    border: none;
+    color: #1b1b1b;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.open_btn {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+}
+
+.close_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.Live_h1 {
+    font-size: 100px;
+}
+
+.Explore_p {
+    font-size: 35px;
+}
+
+.streams, .categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stream_card, .category_card {
+    background-color: #333;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.stream_card img, .category_card img {
+    height: auto;
+}
+
+.stream_card:hover, .category_card:hover {
+    background-color: #555;
+}
+.H2_Categories{
+    margin-left: 30px;
+}
+.stream_card {
+    background-color: #333;
+    margin: 10px;
+    text-align: center;
+    width: 414px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.In_Live{
+    width: 100px;
+    padding-bottom: 60px;
+    
+}
+.audience_200{
+    width: 161px;
+    margin-top: -10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(349deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 100%);
+    color: #ED8E1F;
+}
+.streamer_Stream_1{
+    margin-right: 200px;
+    margin-top: 10px;
+}
+.streamer_Stream_2{
+    margin-right: 200px;
+    margin-top: 10px;
+}
+.streamer_Stream_3{
+    margin-right: 200px;
+    margin-top: 10px;
+}
+.streamer_Stream_4{
+    margin-right: 200px;
+    margin-top: 10px;
+}

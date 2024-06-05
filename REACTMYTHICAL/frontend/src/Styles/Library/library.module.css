@@ -1,0 +1,84 @@
+.main_container {
+    display: flex;
+    height: 900px;
+  }
+  
+  .sidebar_library {
+    width: 200px;
+    background-color: #2a2a2a;
+    padding: 10px;
+  }
+  .search_bar::placeholder {
+    color: white; 
+  }
+  
+  .search_bar {
+    width: 100%;
+    background-color: #939393;
+    color:white;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .list_title {
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .game_list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list_item {
+    color: white;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cube_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .game_container {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #1a1a1a;
+  }
+  
+  .game_title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .game_grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .game_link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .game_link:hover {
+    text-decoration: underline;
+  }
+  .game_card {
+    width: 268px;
+    height: 368px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .game_image {
+    width: 100%;
+    height: auto;
+  }
+  

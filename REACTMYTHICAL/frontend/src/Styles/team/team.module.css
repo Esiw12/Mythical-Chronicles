@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+main{
+    background-color: #181818;
+    height: 884px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding:0;
+    margin:0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color:white;
+    text-align: center;
+    z-index: 2;
+    font-size: 48px;
+}
+.darkoverlay {
+    position: absolute;
+    top: 97px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    height: 884px;
+    padding:0;
+    margin:0;
+}
+.team {
+    margin-top:0;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.team .member {
+    display: inline-block;
+    margin: 20px;
+}
+
+.team .member img {
+    width: 292px;
+    height: 393px;
+    object-fit: cover;
+}
+
+.team .member p {
+    margin: 10px 0 0;
+    font-size:28px;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    border-radius: 50%;
+    filter: blur(13.1px);
+    animation: rise 10s infinite;
+}
+
+.bubble.yellow {
+    background-color: rgba(234, 175, 111, 0.5);
+}
+
+.bubble.orange {
+    background-color: rgba(255, 137, 7, 0.5);
+}
+
+.bubble.lightyellow {
+    background-color: rgba(255, 230, 7, 0.5);
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px) scale(2);
+        opacity: 0;
+    }
+}

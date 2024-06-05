@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam', sans-serif;
+    overflow-x: hidden;
+}
+.Main{
+    background-color: #181818;
+    margin:0;
+    padding: 20px;
+    height: 758px;
+    margin-top: -6px;
+}
+.MainContainer{
+    margin-left: 140px;
+}
+.MainContainer__h1{
+    color:white;
+    font-size: 50px;
+} 
+/*Блок текста*/
+.MainContainer{
+    display:flex;
+    flex-direction: column;
+}
+.MainContainer p{
+    text-align: left;
+}
+.MainContainer p{
+    font-size: 20px;
+    font-weight: 400;
+    color:#FFFFFF;
+    font-family: 'Open Sans', sans-serif !important;
+    line-height: 40px;
+}
+
+.First__p{
+    margin-bottom: 35px;
+}
+.Second__p{
+    margin-bottom: 35px;
+}
+.Third__p{
+    margin-bottom: 35px;
+}

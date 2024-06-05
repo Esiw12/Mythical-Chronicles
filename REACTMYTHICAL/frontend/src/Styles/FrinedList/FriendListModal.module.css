@@ -1,0 +1,127 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2E2E2E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    width: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1000;
+    color: #ffffff;
+  }
+  
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .closeButton {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #ffa500;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .title {
+    text-align: center;
+    color: #ffa500;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profileImage {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .separator {
+    border: 0;
+    height: 1px;
+    background: #444;
+    margin: 10px 0;
+  }
+  
+  .chatSearch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .chatButton {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .searchInput {
+    background-color: #1D1D1D;
+    border: none;
+    padding: 5px;
+    color: #646464;
+    margin-left: 10px;
+    width: 150px;
+  }
+  
+  .friendSection {
+    margin-top: 10px;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    color: #ffa500;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .friendList {
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  
+  .friend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .friendImage {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .friend div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .friendLabel {
+    margin-left: 10px;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+  
