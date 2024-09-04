@@ -1,0 +1,48 @@
+footer {
+    background-color: rgb(0, 0, 0, 0.36);
+    color: #fff;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 200;
+    z-index: 1;
+  }
+  
+  .iconLogo {
+    margin-left: 360px;
+  }
+  
+  .iconLogo,
+  .footerSocial {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footerInformation {
+    text-align: center;
+  }
+  
+  .footerSocial {
+    margin-right: 160px;
+  }
+  
+  .footerSocial .socialIcons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialIcons {
+    margin-right: 100px;
+  }
+  
+  .socialIcons .forum {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .link {
+    color: white;
+  }

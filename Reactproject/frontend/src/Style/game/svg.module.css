@@ -1,0 +1,63 @@
+
+.circleContainer {
+    position: absolute !important;
+    width: 100vw;
+    height: 1230px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .circle {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    margin: 10px;
+    filter: blur(40px);
+    z-index: -2;
+  }
+  
+  .fifthCircle {
+    background: linear-gradient(45deg, #28072E, #22091E);
+    right: 68%;
+    width: 501px;
+    height: 501px;
+    bottom: -10%;
+    overflow: visible;
+  }
+  
+  .firstCircle {
+    background: linear-gradient(45deg, #A542AF, rgba(7, 55, 225, 0.5));
+    /* левый верхний угол */
+    top: 2%;
+    left: 6%;
+    width: 438.94px;
+    height: 401.5px;
+  }
+  
+  .secondCircle {
+    background: linear-gradient(45deg, rgb(147, 15, 15, 0.4), #FF7A00);
+    /* оранжевый */
+    left: 90%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 494px;
+    height: 494px;
+  }
+  
+  .thirdCircle {
+    background: linear-gradient(45deg, #A74098, #A74098);
+    /* правый угол круг */
+    top: -10%;
+    right: -5%;
+    width: 350px;
+    height: 354px;
+  }
+  .fourthCircle {
+    background: linear-gradient(45deg, #A542AF, rgba(7, 55, 225, 0.5));
+    top: 70%;
+    right: 40%;
+    width: 250px;
+    height: 254px;
+  }
+  

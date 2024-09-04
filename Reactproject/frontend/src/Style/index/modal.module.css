@@ -1,0 +1,266 @@
+@import url("https://fonts.cdnfonts.com/css/molle");
+@import url("https://fonts.cdnfonts.com/css/Inter");
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; 
+}
+
+.modalBackground {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 999; /*Я знаю... просто тестил*/
+}
+.krest {
+  width: 20px;
+  border-radius: 50px;
+  margin-left: 230px;
+  background-color: white ;
+}
+.closeModal{
+  background-color: transparent;
+  border:0;
+  width: 50px;
+}
+.wrapper {
+  --input-focus: #2d8cf0;
+  --font-color: #f1f1f1;
+  --font-color-sub: #ffffff;
+  --bg-color: #00000049;
+  --bg-color-alt: #ffffff;
+  --main-color: #ffffff;
+  --bg-color-1: #000000;
+  --bg-before: #ffffff;
+  --border-color: #ffffffa6;
+}
+
+.switch {
+  transform: translateY(-200px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 50px;
+  height: 20px;
+}
+
+.cardSideLogIn {
+  position: absolute;
+  left: -70px;
+  top: 0;
+  width: 100px;
+  text-decoration: underline;
+  color: var(--font-color);
+  font-weight: 400;
+  font-family: "Molle", cursive, sans-serif;
+}
+
+.cardSideSignUp {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  width: 100px;
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 400;
+  font-family: "Molle", cursive, sans-serif;
+}
+
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px solid var(--main-color);
+
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-color-1);
+  transition: 0.3s;
+}
+
+.slider:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 1px solid var(--main-color);
+  border-radius: 25px;
+  left: -2px;
+  bottom: 0px;
+  background-color: var(--bg-before);
+
+  transition: 0.3s;
+}
+
+.toggle:checked+.slider {
+  background-color: var(--bg-color-1);
+}
+
+  .toggle:checked+.slider:before {
+  background-color: var(--bg-before);
+  transform: translateX(30px);
+  }
+  .toggle:checked~.card-side:before {
+  text-decoration: none;
+  font-family: "Molle", cursive, sans-serif;}
+  .toggle:checked~.card-side:after {
+  text-decoration: underline;
+  font-family: "Molle", cursive, sans-serif;}
+  
+
+
+
+
+
+.flipCardInner {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  background-color: transparent;
+  perspective: 1000px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.toggle:checked~.flipCardInner{
+  transform: rotateY(180deg);
+}
+
+.toggle:checked~.flipCardFront {
+  box-shadow: none;
+}
+
+.flipCardFront,
+.flipCardBack {
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: black;
+  gap: 20px;
+  border-radius: 15px;
+}
+
+.flipCardBack {
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+.flipCardForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  margin: 20px 0 20px 0;
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--main-color);
+  font-family: "Molle", cursive, sans-serif
+}
+
+.flipCardInput{
+  width: 250px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid var(--main-color);
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+  font-weight: 200;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+
+.flipCardInput::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+
+}
+
+.flipCardInput:focus {
+  border: 1px solid var(--input-focus);
+
+}
+
+.flipCardBtn:active,
+.button-confirm:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.flipCardBtn {
+  margin: 20px 0 20px 0;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid var(--main-color);
+  background-color: var(--bg-color);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--font-color);
+  cursor: pointer;
+  font-family: "Molle", cursive, sans-serif;
+
+}
+
+.flipCardInput[type="text"],
+.flipCardInput[type="email"],
+.flipCardInput[type="password"] {
+  background-color: black;
+
+}
+
+.circleModalFront {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgb(165, 66, 175, 0.5), #0737E1);
+  width: 150px;
+  height: 150px;
+  left: 227px;
+  bottom: -40px;
+  filter: blur(20px);
+
+}
+
+.circleModalBack {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #A74098, #A74098);
+  width: 150px;
+  height: 150px;
+  left: 237px;
+  bottom: -45px;
+  filter: blur(20px);
+}

@@ -1,0 +1,89 @@
+@import url("https://fonts.cdnfonts.com/css/Inter");
+
+main {
+  padding: 20px;
+  min-height: calc(100vh - 160px);
+  /* height: calc(100vh - 50px);*/
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+ 
+}
+
+body {
+  background-color: black;
+  
+}
+
+/*блок текстов */
+.mainText{
+  z-index: 10;
+  text-align: justify;
+  margin-top:-30px;
+  max-width: 390px;
+  max-height: 650px;
+  margin-left:20px;
+}
+
+.mainContainer{
+  display: flex;
+
+}
+
+.textZagolovok {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.textInformation {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.textInformation,
+.textZagolovok {
+  margin-bottom: 25px;
+  padding: 5px;
+  word-wrap: break-word;
+  font-family: "Inter", sans-serif;
+
+}
+
+.sideImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.js {
+  position: absolute;
+  left: 800px;
+  bottom: 550px;
+}
+
+.cSharp {
+  position: absolute;
+  left: 1450px;
+  bottom: 459px;
+}
+
+.pyt {
+  position: absolute;
+  right: 680px;
+  bottom: 140px;
+}
+
+.cSharp,
+.js,
+.pyt {
+
+  width: 190px;
+  margin-bottom: 10px;
+
+}

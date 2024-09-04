@@ -1,0 +1,154 @@
+main {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  body {
+    background-color: black;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .gamepanel {
+    position: relative;
+    flex: 1;
+    margin-left: 20px; 
+  }
+  
+  
+  .leftpanel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .terminal {
+    background-color:  rgb(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+  }
+  
+  .output {
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow: auto;
+    width: 600px; 
+    height: 400px;
+    border-radius: 15px;
+    border: 1px solid #ffffff;
+    
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .inputcontainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputcontainer span {
+    color: #ffffff;
+    margin-right: 5px;
+  }
+  
+  #terminalinput {
+    flex: 1;
+    padding: 5px;
+    font-family: monospace;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    border: none;
+    outline: none;
+  }
+  .taskpanel {
+    height: 200px;
+    width: 600px;
+    background:rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+  }
+
+
+  /*правая часть*/
+  .rightPanel {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .progressSection,
+  .shopSection {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 600px; /* Или другой нужный размер, совпадающий с левой панелью */
+    margin-bottom: 20px;
+  }
+  
+  .progressBar {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .progress {
+    background-color: #00ff00; /* Зелёный цвет для полосы прогресса */
+    height: 100%;
+    transition: width 0.5s ease;
+  }
+  
+  .shopSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .shopSection li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .shopSection button {
+    background-color: #008cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .shopSection button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Стили для кнопки переключения между прогрессом и магазином */
+  .toggleButton {
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggleButton:hover {
+    background-color: #cccccc;
+  }
+  

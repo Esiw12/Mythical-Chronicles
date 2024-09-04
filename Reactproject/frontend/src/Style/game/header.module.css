@@ -1,0 +1,43 @@
+@import url("https://fonts.cdnfonts.com/css/Inter");
+@import url("https://fonts.cdnfonts.com/css/molle");
+header {
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  font-family: "Inter", sans-serif;
+}
+
+.headcontent {
+  font-weight: 400;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  margin-left: 290px;
+}
+
+.headcontent p {
+  margin-left: 0px;
+}
+.back,.material,.login{
+    margin-left:200px;
+}
+.infoGuide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 0.7;
+}
+.lvltext{
+  color:white;
+  font-weight: 400;
+  font-size:24px;
+  font-family: "Molle", cursive, sans-serif;
+  background-color: rgba(161, 93, 170, 0.384);
+  border-radius: 35px;
+  border: 2px solid #ffffff;
+}
+
+

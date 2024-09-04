@@ -1,0 +1,62 @@
+
+.svg{
+  position: absolute;
+  top: 23%;
+  left: 45%;
+  z-index: -1;
+}
+
+.circleContainer {
+  position: absolute !important;
+  width: 100vw;
+  height: 1230px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.circle {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  margin: 10px;
+  filter: blur(20px);
+  z-index: -2;
+}
+
+.fifthCircle {
+  background: linear-gradient(45deg, #28072E, #22091E);
+  right: 60%;
+  width: 501px;
+  height: 501px;
+  bottom: -22%;
+  overflow: visible;
+}
+
+.firstCircle {
+  background: linear-gradient(45deg, #A542AF, rgba(7, 55, 225, 0.5));
+  /* левый верхний угол */
+  top: 1%;
+  left: 0%;
+  width: 617.01px;
+  height: 583.5px;
+}
+
+.secondCircle {
+  background: linear-gradient(45deg, rgb(147, 15, 15, 0.4), #FF7A00);
+  /* оранжевый */
+  left: 60%;
+  top: 61%;
+  transform: translate(-50%, -50%);
+  width: 494px;
+  height: 494px;
+}
+
+.thirdCircle {
+  background: linear-gradient(45deg, #A74098, #A74098);
+  /* правый угол круг */
+  top: 1%;
+  right: -5%;
+  width: 494px;
+  height: 494px;
+}
