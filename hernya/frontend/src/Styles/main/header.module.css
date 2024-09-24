@@ -1,0 +1,68 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+header .container {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    margin-left:550px;
+}
+.yoga{
+    font-size:24px !important;
+    margin: 0;
+    margin-right:8px;
+    font-weight: 300;
+}
+header .container a {
+    margin: 0 20px; 
+    cursor: pointer;
+    color: #333;
+    font-size: 22px; 
+    text-decoration: none
+}
+
+header .container .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-left:120px;
+    margin-right:120px;
+}
+
+header .container .logo svg {
+    margin-right: 10px; 
+}
+
+
+
+.modalbutton {
+    padding: 10px 25px;
+    border: 2px solid #D96A6A;
+    background-color: transparent; 
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 28px; 
+    font-weight: 200; 
+    font-family: 'Manrope', sans-serif;
+    margin-left: auto; 
+}
+
+.modalbutton:hover {
+    background-color: #D96A6A;
+    color: #fff;
+}

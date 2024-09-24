@@ -1,0 +1,101 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7e9e9;
+    flex: 1 0 auto;
+}
+
+
+  .line{
+    position: absolute;
+    top:5%;
+    left:-55%;
+    
+  }
+  .maincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: white;
+    font-family: 'Manrope', sans-serif;
+}
+
+.yogasection {
+    position: relative;
+    max-width: 1200px;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 40px; 
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    margin-left: -300px;
+}
+
+.yogaoffer {
+    line-height: 0.05;
+    margin-bottom: 20px; 
+  
+}
+.fr{
+    color:#FCBBBB;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size:56px;
+    text-shadow: 1px 1px 1px #000;
+}
+.gray{
+    color:#8E8383;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 900;
+    font-size: 86px;
+    text-shadow: -1px -1px 0 #ccc, 1px 1px 0 #ccc;
+}
+.yogabutton {
+    width: 500px;
+    border: none;
+    background-color: #FFBDBD;
+    color: white;
+    height: 120px;
+    border-radius: 25px;
+    font-size: 28px;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s;
+    
+}
+.yogabutton:hover {
+    background-color: #bf5858;
+}
+
+.rightside {
+    position: relative;
+}
+
+.yogaimagecontainer {
+    width: 100%; 
+    height: 500px; 
+    background-size: cover;
+    background-position: center;
+    margin-top: -250px; 
+    margin-left:50px;
+    position: relative; 
+}
+
+.yogaquote {
+    position: absolute;
+    top: -400px;
+    right: -10px;
+    color: #737070;
+    font-size:36px;
+    width: 900px; 
+    text-align: center; 
+    font-family: 'Lora', serif;
+}
