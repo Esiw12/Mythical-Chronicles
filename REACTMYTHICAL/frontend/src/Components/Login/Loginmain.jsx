@@ -4,12 +4,12 @@ import google from '../../Images/ggl.png';
 import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
-  const [login, setLogin] = useState(''); //перменные состояния
-  const [password, setPassword] = useState(''); //переменные состояния
-  const navigate = useNavigate(); //хук для перенаправления
+  const [login, setLogin] = useState(''); 
+  const [password, setPassword] = useState(''); 
+  const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
-    e.preventDefault(); //предотвращает перезагрузку страницы
+    e.preventDefault(); 
     const response = await fetch('http://localhost:3000/login', {
       method: 'POST',
       headers: {

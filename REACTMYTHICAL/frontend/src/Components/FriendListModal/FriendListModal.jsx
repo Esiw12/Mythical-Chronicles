@@ -3,15 +3,14 @@ import styles from '../../Styles/FrinedList/FriendListModal.module.css';
 import Captain from '../../Images/Team/captain.svg';
 
 function FriendListModal({ onClose }) {
-  const [showOnlineFriends, setShowOnlineFriends] = useState(true); //две переменные состояния
-  const [showOfflineFriends, setShowOfflineFriends] = useState(true); //две переменные состояния
-  const [showGroupChat, setShowGroupChat] = useState(false); //две переменные состояния
-  const [selectedFriends, setSelectedFriends] = useState([]);//две переменные состояния
+  const [showOnlineFriends, setShowOnlineFriends] = useState(true);
+  const [showOfflineFriends, setShowOfflineFriends] = useState(true); 
+  const [showGroupChat, setShowGroupChat] = useState(false); 
+  const [selectedFriends, setSelectedFriends] = useState([]);
 
-  const toggleOnlineFriends = () => setShowOnlineFriends(!showOnlineFriends); //Эта функция переключает состояние видимости списка онлайн-друзей
-  const toggleOfflineFriends = () => setShowOfflineFriends(!showOfflineFriends); //Эта функция переключает состояние видимости списка офлайн-друзей
-  const toggleGroupChat = () => setShowGroupChat(!showGroupChat); //функция переключает состояние видимости секции группового чата
- //функция обрабатывает выбор друзей для группового чата
+  const toggleOnlineFriends = () => setShowOnlineFriends(!showOnlineFriends); 
+  const toggleOfflineFriends = () => setShowOfflineFriends(!showOfflineFriends); 
+  const toggleGroupChat = () => setShowGroupChat(!showGroupChat)
   const handleFriendSelect = (friend) => { 
     setSelectedFriends((prevSelected) =>
       prevSelected.includes(friend)

@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
-const fs = require('fs'); // Добавьте этот модуль
+const fs = require('fs'); 
 const sequelize = require('./config/database');
 const User = require('./models/User');
 const cors = require('cors');
@@ -19,12 +19,12 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
-// Настройка для предоставления статических файлов из папки uploads
+
 app.use('/uploads', express.static(uploadDir));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, uploadDir); //  uploadDir
+    cb(null, uploadDir); 
   },
   filename: function (req, file, cb) {
     cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -35,7 +35,6 @@ const upload = multer({ storage: storage });
 
 sequelize.sync();
 
-// Middleware для аутентификации
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -48,7 +47,7 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// Регистрация пользователя
+
 app.post('/register', async (req, res) => {
   const { login, password, email, phone } = req.body;
   try {
@@ -60,7 +59,7 @@ app.post('/register', async (req, res) => {
   }
 });
 
-// Авторизация пользователя
+
 app.post('/login', async (req, res) => {
   const { login, password } = req.body;
   try {
@@ -81,7 +80,6 @@ app.post('/login', async (req, res) => {
   }
 });
 
-// Получение профиля пользователя
 app.get('/profile', authenticateToken, async (req, res) => {
   try {
     const user = await User.findByPk(req.user.id);
@@ -94,7 +92,6 @@ app.get('/profile', authenticateToken, async (req, res) => {
   }
 });
 
-// Обновление профиля пользователя
 app.put('/profile', [authenticateToken, upload.single('profilePicture')], async (req, res) => {
   const { name, age, email, phone } = req.body;
   try {
@@ -120,10 +117,8 @@ app.put('/profile', [authenticateToken, upload.single('profilePicture')], async 
 
 const clientBuildPath = path.join(__dirname, '../frontend/build');
 
-// Обслуживаем статические файлы из React приложения
 app.use(express.static(clientBuildPath));
 
-// Обрабатываем все GET-запросы и отправляем index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(clientBuildPath, 'index.html'));
 });

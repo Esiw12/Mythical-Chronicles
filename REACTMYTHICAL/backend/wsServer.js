@@ -6,7 +6,7 @@ wss.on('connection', ws => {
   console.log('New client connected');
   ws.on('message', message => {
     console.log('received:', message);
-    // Рассылка сообщения всем подключенным клиентам, кроме отправителя
+   
     wss.clients.forEach(client => {
       if (client !== ws && client.readyState === WebSocket.OPEN) {
         client.send(message);

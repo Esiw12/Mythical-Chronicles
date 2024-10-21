@@ -13,7 +13,7 @@ function Team() {
       }, []);
   return (
     <>
-{/* Начало main */}
+
 <main className={styles.main}>
   <div className={styles.darkoverlay} />  
   <div className={styles.team}>
@@ -41,7 +41,7 @@ function Team() {
   </div>
 </main>
   
-{/* Конец main */}
+
 
     </>
   )

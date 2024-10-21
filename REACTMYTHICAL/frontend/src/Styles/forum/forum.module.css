@@ -14,8 +14,8 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 140px); /* Высота окна минус высота хедера и футера */
-    box-sizing: border-box; /* Учитывать отступы и padding */
+    min-height: calc(100vh - 140px); 
+    box-sizing: border-box;
 }
 
 .search__bar {
@@ -25,8 +25,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    width: calc(100% - 40px); /* Изменение ширины панели поиска */
-    padding: 0 20px; /* Отступы внутри панели поиска */
+    width: calc(100% - 40px); 
+    padding: 0 20px; 
 }
 
 .search__bar .title {
@@ -48,14 +48,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex: 1; /* Растягивать на всю оставшуюся высоту */
+    flex: 1; 
 }
 
 .content {
     background-color: #323232;
     padding: 20px;
     flex: 2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавление тени */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
     margin-right: 20px;
 }
 
@@ -63,7 +63,7 @@ body {
     background-color: #323232;
     padding: 20px;
     flex: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавление тени */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
     display: flex;
     flex-direction: column;
     height: 836px;
@@ -73,13 +73,13 @@ body {
     font-size: 46px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ffffff; /* Белый цвет для заголовка */
+    color: #ffffff; 
 }
 
 .forum_post {
     background-color: #1E1E1E; 
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавление тени */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     display: flex;
     margin-bottom: 20px;
     width: 96%; 
@@ -152,7 +152,7 @@ body {
 .post_content {
     margin-top: 10px;
     text-align: left;
-    flex: 2; /* Добавление flex для равномерного распределения пространства */
+    flex: 2; 
 }
 
 .post_content h3 {
@@ -163,7 +163,7 @@ body {
 .sidebar_section {
     margin-bottom: 20px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавление тени */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar_section h3 {
@@ -201,7 +201,7 @@ body {
 .query {
     margin-bottom: 5px;
     color: #ffffff; 
-    font-family: 'Be Vietnam', sans-serif; /* Шрифт Be Vietnam */
-    font-size: 1.3em; /* Увеличенный размер шрифта */
-    line-height: 1.5em; /* Высота строки для удобства чтения */
+    font-family: 'Be Vietnam', sans-serif; 
+    font-size: 1.3em; 
+    line-height: 1.5em; 
 }

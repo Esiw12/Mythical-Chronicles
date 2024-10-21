@@ -22,7 +22,7 @@ function Stream() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        function updateTime() { //функция обновляет текущее время 
+        function updateTime() { 
           const now = new Date();
           const hours = String(now.getHours()).padStart(2, '0');
           const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -33,7 +33,7 @@ function Stream() {
         function openPanel() {
           document.getElementById('subscriptionsPanel').style.right = '0';
         }
-        // функции управляют открытием и закрытием панели подписок.
+       
         function closePanel() {
           document.getElementById('subscriptionsPanel').style.right = '-300px';
         }

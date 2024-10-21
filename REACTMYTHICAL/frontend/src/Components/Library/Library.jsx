@@ -8,7 +8,7 @@ import atomic from '../../Images/Library/Atomic.svg';
 import Terraria from '../../Images/Library/Terraria.svg';
 import cube from '../../Images/Library/cube.png';
 import hollow from '../../Images/Library/logo_hollow.svg';
-//массив объектов
+
 const games = [
     { name: 'Hollow Knight', image: hollow , path: '/'},
     { name: 'Genshin Impact', image: genshin },
