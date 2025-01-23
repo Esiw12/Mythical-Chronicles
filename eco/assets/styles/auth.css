@@ -1,0 +1,65 @@
+* {
+    font-family: "Jura";
+}
+
+body {
+    margin: 0px;
+}
+
+
+.auth-container {
+    background-color: #ACD1B2;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container__title {
+    font-size: 64px;
+    margin: 20px 0px 50px;
+}
+
+.auth-container__input-title {
+    font-size: 36px;
+    color: #111615;
+    margin: 45px 0px 10px 0px;
+    text-align: center;
+}
+
+.auth-container__input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color: #fff;
+    border-style: solid;
+    margin: 0px 130px;
+}
+
+.auth-container__button {
+    background-color: #3B6D56;
+    color: #fff;
+    border-color: #3B6D56;
+    font-size: 24px;
+    margin: 100px 0px 10px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border-style: solid;
+
+}
+
+.auth-container__link {
+    color: #3B6D56;
+    text-decoration: none;
+}
+
+.auth-container-inputs {
+    display: flex;
+}
+
+.auth-container-back {
+    width: 64px;
+    margin: 50px 100px 0px;
+    align-self: start;
+
+}

@@ -1,0 +1,10 @@
+.food__title{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.food-list-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 32px;
+}

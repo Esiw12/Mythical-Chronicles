@@ -1,0 +1,93 @@
+.header-image-rooms {
+    background-image: url("../images/backgrounds/header-background-rooms.png");
+    background-size: 100% 100%;
+    height: 100vh;
+   
+}
+
+.header-image-restaurant{
+    background-image: url("../images/backgrounds/header-background-food.png");
+    background-size: 100% 100%;
+    height: 100vh;
+ 
+}
+
+.header-entertainment-rooms{
+    background-image: url("../images/backgrounds/header-background-mountains.png");
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.header-image-rooms .header-content,.header-image-restaurant .header-content,.header-entertainment-rooms .header-content{
+    margin: 200px 0px;
+}
+
+.body-container{
+    margin: 90px;
+}
+
+.section-room__image{
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+}
+
+
+.section-room__title{
+    font-size: 64px;
+}
+
+.section-room__list-item{
+    font-size: 40px;
+    margin: 40px 0px;
+}
+
+.section-room__button{
+    padding: 25px 90px;
+    background-color: #ACD1B2;
+    border-color: #ACD1B2;
+    border-style: solid;
+    border-radius: 45px;
+    font-size: 32px;
+}
+.section-room__image-type2{
+    width: 30%;
+    
+}
+.section-room__image-type3{
+    width: 50%;
+    background-size: 100% 100%;
+    object-fit: contain; 
+}
+
+.booking{
+    background-color: #ACD1B2;
+    margin: 90px;
+    padding: 90px;
+    border-radius: 47px;
+}
+
+.booking__title{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.booking-input-container__title{
+    font-size: 20px;
+}
+
+.booking__additional-title{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 50px;
+}
+.booking__radio-buton{
+    margin: 30px;
+    font-size: 20px;
+}
+
+.booking-input-container__input{
+    font-size: 20px;
+}
+.booking-input-container__select{
+    width: 171px;
+}

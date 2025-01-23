@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/jura" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/auth.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="auth-container">
+        <a class="auth-container-back" href="../index.html">
+            <img class="auth-container-back"  src="../assets/images/icons/icon-back_light.png" alt="back">
+        </a>
+        <p class="auth-container__title">Вход</p>
+
+        <p class="auth-container__input-title">Введите логин: </p>
+        <input class="auth-container__input" id="auth-container__input-login" type="text" placeholder="Логин">
+
+        <p class="auth-container__input-title">Введите пароль:</p>
+        <input class="auth-container__input" id="auth-container__input-password" type="text" placeholder="Пароль">
+
+        <button class="auth-container__button auth-container__button-login">Войти </button>
+        <a class="auth-container__link" href="register.html"> Зарегистрироваться </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../scripts/login-script.js"></script>
+</body>
+
+</html>
