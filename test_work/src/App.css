@@ -144,21 +144,18 @@ button {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Заголовок модального окна */
 .confirm-modal p {
   font-size: 1.2em;
   color:black;
   margin-bottom: 15px;
 }
 
-/* Контейнер кнопок */
 .confirm-modal-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
 
-/* Кнопки потверждения модального окна */
 .confirm-btn {
   background-color: #28a745;
   color: rgb(0, 0, 0);

@@ -3,10 +3,9 @@ import axios from "axios";
 import Modal from "react-modal";
 import "./App.css";
 
-// URL для JSON-сервера
+// JSON-сервер
 const API_URL = "http://localhost:3001/seminars";
 
-// Настройка корневого элемента для модального окна
 Modal.setAppElement("#root");
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
   const [loading, setLoading] = useState(true); // Состояние загрузки
   const [error, setError] = useState(null); // Ошибка загрузки
 
-  // 📌 Загружаем список семинаров при монтировании компонента
+  // Загружаем список семинаров при монтировании компонента
   useEffect(() => {
     setLoading(true);
     axios.get(API_URL)
@@ -33,25 +32,25 @@ function App() {
       });
   }, []);
 
-  // 📌 Открытие модального окна редактирования
+  //  Открытие модального окна редактирования
   const openEditModal = (seminar) => {
     setSelectedSeminar(seminar);
     setModalIsOpen(true);
   };
 
-  // 📌 Закрытие модального окна
+  // Закрытие модального окна
   const closeModal = () => {
     setModalIsOpen(false);
     setSelectedSeminar(null);
   };
 
-  // 📌 Обновление данных семинара в состоянии
+  //  Обновление данных семинара
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setSelectedSeminar(prev => ({ ...prev, [name]: value }));
   };
 
-  // 📌 Сохранение изменений семинара
+  //  Сохранение изменений семинара
   const saveChanges = () => {
     if (!selectedSeminar) return;
 
@@ -66,12 +65,12 @@ function App() {
       });
   };
 
-  // 📌 Подтверждение удаления семинара
+  // Подтверждение удаления семинара
   const confirmDeleteSeminar = (id) => {
     setConfirmDelete(id);
   };
 
-  // 📌 Удаление семинара
+  // Удаление семинара
   const deleteSeminar = () => {
     axios.delete(`${API_URL}/${confirmDelete}`)
       .then(() => {
@@ -88,11 +87,11 @@ function App() {
     <div className="container">
       <h1>📅 Семинары</h1>
 
-      {/* 📌 Обработка загрузки и ошибок */}
-      {loading && <p className="loading">⏳ Загрузка...</p>}
+      {/*Обработка загрузки и ошибок */}
+      {loading && <p className="loading">Загрузка...</p>}
       {error && <p className="error">{error}</p>}
 
-      {/* 📌 Отображение списка семинаров */}
+      {/*Отображение списка семинаров */}
       <div className="seminar-list">
         {seminars.map(seminar => (
           <div key={seminar.id} className="seminar-card">
@@ -106,7 +105,7 @@ function App() {
         ))}
       </div>
 
-      {/* 📌 Модальное окно редактирования */}
+      {/* Модальное окно редактирования */}
       {modalIsOpen && selectedSeminar && (
         <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="modal">
           <h2>Редактирование семинара</h2>
@@ -119,7 +118,7 @@ function App() {
         </Modal>
       )}
 
-      {/* 📌 Окно подтверждения удаления */}
+      {/*Окно подтверждения удаления */}
       {confirmDelete !== null && (
   <div className="confirm-modal-overlay">
     <div className="confirm-modal">
