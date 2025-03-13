@@ -1,0 +1,59 @@
+.circle {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    margin: 10px;
+    filter: blur(151.8px);
+    z-index: -2;
+  }
+  .first_Circle {
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 20%;
+    left: 15%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  .second_circle{
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 44%;
+    right: -20%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  .third_circle{
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 90%;
+    left: -10%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  .fourth_circle{
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 210%;
+    left: 30%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  .fifth_circle{
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 280%;
+    left: 80%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  .sixth_circle{
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 370%;
+    left: -5%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  .seventh_circle{
+    background: linear-gradient(45deg, rgba(198, 7, 134, 1),rgba(132, 0, 255, 1)); 
+    top: 390%;
+    right:-5%;
+    width: 417.01px;
+    height: 320.5px;
+  }
+  
+  

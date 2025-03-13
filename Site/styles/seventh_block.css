@@ -1,0 +1,210 @@
+.crypto_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 5%;
+    gap: 50px;
+}
+
+
+.crypto_left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+
+.crypto_card {
+    background: rgba(132, 0, 255, 0.15);
+    padding: 40px; 
+    border-radius: 20px; 
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    min-width: 420px; 
+    min-height: 250px; 
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+
+.crypto_value {
+    font-size: 32px; 
+    font-weight: bold;
+    color: white;
+}
+
+.crypto_currency {
+    background: rgba(138, 43, 226, 0.4);
+    padding: 7px 14px;
+    border-radius: 12px;
+    font-size: 16px; 
+    color: white;
+}
+
+
+.crypto_wallet {
+    background: rgba(138, 43, 226, 0.2);
+    padding: 18px; 
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.wallet_label {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.wallet_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wallet_address {
+    font-size: 16px; 
+    color: white;
+}
+
+.copy_btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.crypto_transactions ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.crypto_transactions li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    gap: 12px; 
+}
+
+.transaction_icon {
+    color: #ff8c00;
+    font-size: 18px; 
+}
+
+.transaction_text {
+    flex: 2;
+}
+
+.transaction_value {
+    flex: 1;
+    text-align: right;
+}
+
+.transaction-hash {
+    flex: 1;
+    text-align: right;
+    color: #ccc;
+}
+
+
+.crypto_tags {
+    display: flex;
+    gap: 10px;
+}
+
+.crypto_tags li {
+    background: black;
+    border: 1px solid rgba(132, 0, 255, 1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    width: 20%;
+}
+
+
+.crypto_right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.crypto_heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.crypto_subtext {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+.crypto_button {
+    background: rgba(138, 43, 226, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.crypto_button:hover {
+    background: rgba(138, 43, 226, 0.5);
+}
+
+
+.crypto_features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature_btn {
+    background-color: rgba(132, 0, 255, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feature_btn:hover {
+    background: rgba(132, 0, 255, 0.15);
+}
+
+.feature_icon {
+    color: #8a2be2;
+    font-size: 16px;
+}
+
+
+.crypto_graphics {
+    display: flex;
+    gap: 10px;
+}
+
+.crypto_box {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(to bottom, #d1d1d1, #555);
+    border-radius: 10px;
+}

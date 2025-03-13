@@ -1,0 +1,125 @@
+
+/* 3 блок */
+
+
+
+.About_section {
+    text-align: center;
+    padding: 80px 5%;
+    color: white;
+    position: relative;
+}
+
+.About-tag {
+    background: rgba(138, 43, 226, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8a2be2;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 2px solid rgba(138, 43, 226, 0.5);
+}
+
+.About-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.About_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.About_text, .About_text_right {
+    flex: 1;
+    max-width: 300px;
+}
+
+.About_text_right {
+align-self: flex-end;
+}
+
+.About_heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 15px;
+}
+
+.About_description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.About_video {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.video_frame {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(to bottom, #d1d1d1, #555);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play_button {
+    width: 80px;
+    height: 80px;
+    background: rgba(138, 43, 226, 0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -18px;
+    bottom: 180px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+    border: 2px solid rgba(138, 43, 226, 0.5);
+}
+
+.play_button span {
+    font-size: 28px;
+    color: white;
+}
+
+.play_button:hover {
+    transform: scale(1.1);
+}
+
+
+.About_btn {
+    margin-top: 20px;
+    padding: 12px 26px;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+    background: linear-gradient(45deg, #8a2be2, #5d00ff);
+    padding: 14px 28px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    
+}
+
+

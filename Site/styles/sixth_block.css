@@ -1,0 +1,108 @@
+.Crypto_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    gap: 40px;
+}
+
+
+.Crypto_left {
+    flex: 2;
+}
+
+
+.Crypto_card {
+    background: linear-gradient(to bottom right, #aaa, #444);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 250px;
+    justify-content: flex-start;
+    position: relative;
+}
+
+
+.Crypto_tag {
+    background: rgba(138, 43, 226, 0.2);
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline-block;
+    border: 2px solid rgba(138, 43, 226, 0.5);
+    align-self: flex-start;
+}
+
+
+.Crypto_title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.Crypto_buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+}
+
+.Crypto_start_btn_1 {
+    background: linear-gradient(45deg, #8a2be2, #5d00ff);
+    padding: 14px 24px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+    transition: 0.3s;
+}
+
+.Crypto_start_btn_1:hover {
+    transform: scale(1.05);
+}
+
+
+.Crypto_play_btn {
+    width: 42px;
+    height: 42px;
+    background: rgba(138, 43, 226, 0.4);
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Crypto_play_btn:hover {
+    background: rgba(138, 43, 226, 0.7);
+    transform: scale(1.1);
+}
+
+
+.Crypto_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Crypto_placeholder {
+    width: 240px;
+    height: 360px;
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #d1d1d1, #555);
+    border-radius: 15px;
+}
