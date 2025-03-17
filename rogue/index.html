@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Roguelike Demo</title>
+	<style>
+		
+* { box-sizing: border-box; }
+body, html { height: 100%; margin: 0; padding: 0; }
+body { background-color: #000; color: #fff; font-family: "Roboto", sans-serif; }
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.field-box {
+    border: 2px solid #d0d0d0;
+    float: left;
+    width: 1024px;
+    height: 640px;
+    overflow: auto; 
+    position: relative;
+}
+
+.field {
+    position: relative;
+    width: 2000px; 
+    height: 1200px;
+}
+
+.field .tile {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    background-image: url(images/tile-.png); /* фон пола */
+    z-index: 5;
+}
+.field .tileW {
+    background-image: url(images/tile-W.png);
+}
+.field .tileE {
+    background-image: url(images/tile-E.png);
+    z-index: 10;
+}
+.field .tileP {
+    background-image: url(images/tile-P.png);
+    z-index: 10;
+}
+.field .tileHP {
+    background-image: url(images/tile-HP.png);
+    z-index: 9;
+}
+.field .tileSW {
+    background-image: url(images/tile-SW.png);
+    z-index: 9;
+}
+.field .tile .health {
+    position: absolute;
+    left: 0px; 
+    top: 0px; 
+    height: 3px;
+    background-color: #ff0000;
+    z-index: 11;
+}
+.field .tileP .health {
+    background-color: #00ff00;
+}
+
+.cl { clear: both; display: block; }
+.restart-box {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+    border: 2px solid #fff;
+    display: none;  
+    z-index: 9999;  
+}
+.restart-box h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+.restart-box button {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+	</style>
+</head>
+<body>
+<h1>Игровое поле</h1>
+
+<div class="field-box">
+    <div class="field"></div>
+</div>
+<div class="cl"></div>
+<div class="restart-box" id="winBox">
+    <h2>Вы победили! Все монстры повержены.</h2>
+    <button id="restartBtn">Сыграть заново</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+function Game() {
+
+    this.width = 40;
+    this.height = 24;
+    this.map = [];
+    this.player = {
+        x: 0,
+        y: 0,
+        hp: 30,      
+        attack: 5    
+    };
+    this.enemies = [];
+    this.potionCount = 10;  
+    this.swordCount = 2;    
+    this.enemyCount = 10;   
+    this.randInt = function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+}
+Game.prototype.init = function() {
+    this.generateMap();
+    this.render();
+    this.initKeyboard();
+    this.centerCameraOnPlayer();
+};
+Game.prototype.generateMap = function() {
+    for (let row = 0; row < this.height; row++) {
+        this.map[row] = [];
+        for (let col = 0; col < this.width; col++) {
+            this.map[row][col] = 'W';
+        }
+    }
+    let roomCount = this.randInt(5, 10);
+    let rooms = []; 
+    for (let i = 0; i < roomCount; i++) {
+        let rw = this.randInt(3, 8); 
+        let rh = this.randInt(3, 8); 
+        let rx = this.randInt(1, this.width - rw - 1);
+        let ry = this.randInt(1, this.height - rh - 1);
+        for (let r = ry; r < ry + rh; r++) {
+            for (let c = rx; c < rx + rw; c++) {
+                this.map[r][c] = '.';
+            }
+        }
+        rooms.push({
+            x: Math.floor(rx + rw / 2),
+            y: Math.floor(ry + rh / 2),
+            w: rw,
+            h: rh
+        });
+    }
+    rooms.sort((a, b) => a.x - b.x);
+    for (let i = 0; i < rooms.length - 1; i++) {
+        let x1 = rooms[i].x;
+        let y1 = rooms[i].y;
+        let x2 = rooms[i + 1].x;
+        let y2 = rooms[i + 1].y;
+        if (x2 < x1) {
+            for (let x = x2; x <= x1; x++) {
+                this.map[y1][x] = '.';
+            }
+        } else {
+            for (let x = x1; x <= x2; x++) {
+                this.map[y1][x] = '.';
+            }
+        }
+        if (y2 < y1) {
+            for (let y = y2; y <= y1; y++) {
+                this.map[y][x2] = '.';
+            }
+        } else {
+            for (let y = y1; y <= y2; y++) {
+                this.map[y][x2] = '.';
+            }
+        }
+    }
+    this.placeRandomItems('SW', this.swordCount);
+    this.placeRandomItems('HP', this.potionCount);
+    let pPos = this.findRandomFloor();
+    this.player.x = pPos.x;
+    this.player.y = pPos.y;
+    this.map[pPos.y][pPos.x] = 'P';
+    for (let i = 0; i < this.enemyCount; i++) {
+        let ePos = this.findRandomFloor();
+      let enemy = {
+            x: ePos.x,
+            y: ePos.y,
+            hp: 10
+        };
+        this.enemies.push(enemy);
+        this.map[ePos.y][ePos.x] = 'E';
+    }
+};
+Game.prototype.placeRandomItems = function(itemType, count) {
+    for (let i = 0; i < count; i++) {
+        let pos = this.findRandomFloor();
+        this.map[pos.y][pos.x] = itemType;
+    }
+};
+Game.prototype.findRandomFloor = function() {
+    let freeCells = [];
+    for (let row = 0; row < this.height; row++) {
+        for (let col = 0; col < this.width; col++) {
+            if (this.map[row][col] === '.') {
+                freeCells.push({x: col, y: row});
+            }
+        }
+    }
+    if (freeCells.length === 0) {
+        return {x: 1, y: 1};
+    }
+    return freeCells[this.randInt(0, freeCells.length - 1)];
+};
+
+Game.prototype.render = function() {
+    let field = $('.field');
+    field.empty();
+    for (let row = 0; row < this.height; row++) {
+        for (let col = 0; col < this.width; col++) {
+            let tileType = this.map[row][col];
+            let tileDiv = $('<div class="tile"></div>');
+            tileDiv.css({
+                left: (col * 50) + 'px',
+                top: (row * 50) + 'px'
+            });
+            if (tileType === 'W') {
+                tileDiv.addClass('tileW');
+            } else if (
+                tileType === '.' ||
+                tileType === 'P' ||
+                tileType === 'E' ||
+                tileType === 'HP' ||
+                tileType === 'SW'
+            ) {
+                if (tileType === 'P') {
+                    tileDiv.addClass('tileP');
+                    let percentHP = (this.player.hp / 30) * 100;
+                    if (percentHP < 0) percentHP = 0;
+                    tileDiv.append('<div class="health" style="width:' + percentHP + '%;"></div>');
+                }
+                else if (tileType === 'E') {
+                    tileDiv.addClass('tileE');
+    
+                    let enemy = this.enemies.find(e => e.x === col && e.y === row);
+                    if (enemy) {
+                        let eHP = enemy.hp;
+                        let ePercent = (eHP / 10) * 100;
+                        if (ePercent < 0) ePercent = 0;
+                        tileDiv.append('<div class="health" style="width:' + ePercent + '%;"></div>');
+                    }
+                }
+             
+                else if (tileType === 'HP') {
+                    tileDiv.addClass('tileHP');
+                }
+             
+                else if (tileType === 'SW') {
+                    tileDiv.addClass('tileSW');
+                }
+            }
+            field.append(tileDiv);
+        }
+    }
+};
+Game.prototype.initKeyboard = function() {
+    let self = this;
+    $(document).keydown(function(e) {
+        let key = e.which;
+        let newX = self.player.x;
+        let newY = self.player.y;
+        let moved = false; 
+
+        if (key === 87) { // W
+            newY--;
+            moved = true;
+        } else if (key === 83) { // S
+            newY++;
+            moved = true;
+        } else if (key === 65) { // A
+            newX--;
+            moved = true;
+        } else if (key === 68) { // D
+            newX++;
+            moved = true;
+        } else if (key === 32) { // пробел
+            self.playerAttack();
+            self.checkWinCondition();
+            self.enemiesMove();
+            self.render();
+            self.centerCameraOnPlayer();
+            return;
+        } else {
+            return; 
+        }
+
+        if (moved) {
+            if (self.canMoveTo(newX, newY)) {
+                self.map[self.player.y][self.player.x] = '.';
+                self.player.x = newX;
+                self.player.y = newY;
+                self.checkItemPickup(newX, newY);
+                self.map[newY][newX] = 'P';
+                self.enemiesAttackHeroIfAdjacent();
+                self.enemiesMove();
+            }
+            self.render();
+            self.checkWinCondition();
+            self.centerCameraOnPlayer();
+        }
+    });
+};
+
+Game.prototype.canMoveTo = function(x, y) {
+    if (x < 0 || y < 0 || x >= this.width || y >= this.height) {
+        return false;
+    }
+    if (this.map[y][x] === 'W') {
+        return false;
+    }
+    return true;
+};
+Game.prototype.checkItemPickup = function(x, y) {
+    let tile = this.map[y][x];
+    if (tile === 'HP') {
+        this.player.hp += 10; 
+        if (this.player.hp > 30) this.player.hp = 30; 
+    } else if (tile === 'SW') {
+        this.player.attack += 3;
+    }
+    if (tile === 'HP' || tile === 'SW') {
+        this.map[y][x] = '.';
+    }
+};
+Game.prototype.playerAttack = function() {
+    let adj = [
+        {x: this.player.x + 1, y: this.player.y},
+        {x: this.player.x - 1, y: this.player.y},
+        {x: this.player.x, y: this.player.y + 1},
+        {x: this.player.x, y: this.player.y - 1}
+    ];
+    for (let i = 0; i < this.enemies.length; i++) {
+        let e = this.enemies[i];
+        for (let j = 0; j < adj.length; j++) {
+            if (e.x === adj[j].x && e.y === adj[j].y) {
+                e.hp -= this.player.attack;
+                if (e.hp <= 0) {
+                    this.map[e.y][e.x] = '.';
+                }
+            }
+        }
+    }
+    this.enemies = this.enemies.filter(e => e.hp > 0);
+};
+Game.prototype.enemiesAttackHeroIfAdjacent = function() {
+    let adj = [
+        {x: this.player.x + 1, y: this.player.y},
+        {x: this.player.x - 1, y: this.player.y},
+        {x: this.player.x, y: this.player.y + 1},
+        {x: this.player.x, y: this.player.y - 1}
+    ];
+    for (let i = 0; i < this.enemies.length; i++) {
+        let e = this.enemies[i];
+        for (let j = 0; j < adj.length; j++) {
+            if (e.x === adj[j].x && e.y === adj[j].y) {
+                this.player.hp -= 2; 
+                if (this.player.hp <= 0) {
+                    this.player.hp = 0;
+                    alert("Вы погибли! Игра окончена.");
+                }
+                return; 
+            }
+        }
+    }
+};
+Game.prototype.enemiesMove = function() {
+    for (let i = 0; i < this.enemies.length; i++) {
+        let e = this.enemies[i];
+        this.map[e.y][e.x] = '.';
+        let dir = this.randInt(0, 3);
+        let newX = e.x;
+        let newY = e.y;
+        if (dir === 0) {
+            newY--; // вверх
+        } else if (dir === 1) {
+            newY++; // вниз
+        } else if (dir === 2) {
+            newX--; // влево
+        } else if (dir === 3) {
+            newX++; // вправо
+        }
+        if (this.canMoveTo(newX, newY) && this.map[newY][newX] === '.') {
+            e.x = newX;
+            e.y = newY;
+        }
+
+        this.map[e.y][e.x] = 'E';
+    }
+    this.enemiesAttackHeroIfAdjacent();
+};
+Game.prototype.centerCameraOnPlayer = function() {
+    let container = document.querySelector('.field-box');
+    if (!container) return;
+    let tileSize = 50;
+    let playerPxX = this.player.x * tileSize;
+    let playerPxY = this.player.y * tileSize;
+    let viewportW = container.clientWidth;
+    let viewportH = container.clientHeight;
+    let scrollLeft = playerPxX - viewportW / 2 + tileSize / 2;
+    let scrollTop  = playerPxY - viewportH / 2 + tileSize / 2;
+    if (scrollLeft < 0) scrollLeft = 0;
+    if (scrollTop < 0) scrollTop = 0;
+    let maxScrollLeft = 2000 - viewportW;
+    let maxScrollTop  = 1200 - viewportH;
+    if (scrollLeft > maxScrollLeft) scrollLeft = maxScrollLeft;
+    if (scrollTop > maxScrollTop) scrollTop = maxScrollTop;
+
+    container.scrollLeft = scrollLeft;
+    container.scrollTop = scrollTop;
+};
+Game.prototype.checkWinCondition = function() {
+    if (this.enemies.length === 0) {
+        document.getElementById('winBox').style.display = 'block';
+    }
+};
+
+var game;
+$(function(){
+    game = new Game();
+    game.init();
+    $('#restartBtn').click(function(){
+        location.reload();
+    });
+});
+</script>
+</body>
+</html>
